@@ -1,0 +1,31 @@
+﻿http://www.codeproject.com/Articles/94043/SOAP-Web-Services-Create-Once-Consume-Everywhere
+http://www.codeproject.com/Articles/4398/Authentication-for-Web-Services-using-SOAP-headers
+http://www.codeproject.com/Articles/27365/Authenticate-NET-Web-Service-with-Custom-SOAP-Head
+http://www.codeproject.com/KB/webservices/SOAPHeaderAuthentication.aspx?q=web+service+soap+c%23+authentication
+http://msdn.microsoft.com/en-us/library/vstudio/9z52by6a(v=vs.100).aspx
+
+http://msdn.microsoft.com/en-us/library/vstudio/w67h0dw7(v=vs.100).aspx
+
+http://www.codeguru.com/csharp/csharp/cs_webservices/security/article.php/c5479/Build-Secure-Web-Services-With-SOAP-Headers-and-Extensions.htm
+http://aspalliance.com/805_Soap_Headers_Authentication_in_Web_Services
+
+http://www.c-sharpcorner.com/UploadFile/DipalChoksi/FormAuthenticationforMobileApplications11172005021555AM/FormAuthenticationforMobileApplications.aspx
+http://dotnetslackers.com/articles/aspnet/Securing-ASP-Net-Web-Services-with-Forms-Authentication.aspx
+
+http://stackoverflow.com/questions/4945420/soap-basic-auth-header
+http://forums.asp.net/t/1215550.aspx/1
+
+
+http://www.codeproject.com/Articles/22190/Securing-your-Web-Services-Using-Forms-Authenticat
+
+http://www.codeproject.com/KB/webservices/MonitorWebServicesUsage.aspx?q=web+service+soap+c%23+authentication
+
+
+
+Forms Authentication
+	http://msdn.microsoft.com/en-us/library/ff647070.aspx
+	http://msdn.microsoft.com/en-us/library/xdt4thhy(v=vs.100).aspx
+	http://msdn.microsoft.com/en-us/library/330a99hc(v=vs.100).aspx
+	http://msdn.microsoft.com/en-us/library/91f66yxt(v=vs.100).aspx
+	http://blog.webgear.co.nz/archive/2007/11/23/forms-authentication-in-web-services.aspx
+

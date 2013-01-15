@@ -1,0 +1,42 @@
+﻿http://www.webmonkey.com/2010/05/embed-videos-in-your-web-pages-using-html5/
+
+<video 
+	width="560" height="340" 
+	controls
+	>
+	<source 
+		src="path/to/myvideo.mp4" 
+		type='video/mp4; 
+		codecs="avc1.42E01E, mp4a.40.2"'
+		>
+	<source 
+		type='video/ogg; codecs="theora, vorbis"'
+		src="path/to/myvideo.ogv" 
+		>
+</video>
+
+
+
+<video 
+	width="560" height="340" 
+	controls
+	>
+	<source 
+		type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+		src="path/to/myvideo.mp4" 
+		>  
+		<source 
+			type='video/ogg; codecs="theora, vorbis"'
+			src="path/to/myvideo.ogv" 
+			>	
+		<object 
+			width="640" height="384" 
+			type="application/x-shockwave-flash"
+			data="path/to/swf/player.swf?image=placeholder.jpg&file=path/to/myvideo.mp4"
+			>
+			<param 
+				name="movie" 
+				value="path/to/swf/player.swf?image=placeholder.jpg&file=path/to/myvideo.mp4" 
+			/>
+		</object>
+</video>

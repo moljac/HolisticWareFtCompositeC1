@@ -1,0 +1,74 @@
+﻿Website
+	1st run
+		before
+			~/App_Data/Composite/Configuration/
+											UrlFormatting.xml
+
+		after
+			~/App_Data/Composite/Configuration/
+											UrlFormatting.xml
+											FirstTimeStart.xml
+											InstallationInformation.xml
+											SystemInitialized.xml
+											DynamicXmlDataProvider.config
+
+UrlFormatting.xml
+	<?xml version="1.0" encoding="utf-8"?>
+	<ReplacementRules>
+		<!-- Extended latin -->
+		<add oldValue="å" newValue="aa" />
+		<add oldValue="æ" newValue="ae" />
+		<add oldValue="ø" newValue="oe" />
+		<add oldValue="ä" newValue="ae" />
+		<add oldValue="ö" newValue="oe" />
+	</ReplacementRules>
+
+FirstTimeStart.xml
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<Root time="2012-12-03T16:47:08.8863649+01:00" />
+
+InstallationInformation.xml
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<InstallationInformation installationId="2f74b7e3-96c0-4a23-900d-ff1de51d38ca" />
+
+SystemInitialized.xml
+	<?xml version="1.0" encoding="utf-8"?>
+	<Root Status="true" />
+
+DynamicXmlDataProvider.config
+
+
+
+=================================================================================================
+Url and the folder with the same name
+
+	Motivation:
+	need folder for multimedial files peering to site root so urls for content and linked
+	media would be "the same" (similar, alike).
+
+	http://holisticware.net/holisticware
+	physical folder holisticware/ in the root of the website or web-application
+
+	Sample:
+	contetnt(page)
+		http://holisticware.net/holisticware/partners
+
+	multimedia links
+		on-site: ~/holisticware/partners/composite-c1.png
+		CDN:	 http://contnent.holisticware.net/holisticware/partners/composite-c1.png
+
+
+	generally: Not possible
+	TODO: test with MVC, url rewrites etc.
+
+	Workaround:
+		folder for multimedia - change name: 
+									h0115t1cw4r3
+									stud10-54c
+									...
+
+
+
+

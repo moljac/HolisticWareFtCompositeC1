@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>RIZ</name>
+  <description><![CDATA[]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href></href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>Unknown road</name>
+    <description><![CDATA[<a href="https://maps.google.hr/maps/place?hl=en&amp;authuser=0&amp;t=h&amp;cad=src:ppiwlink&amp;ei=__qpUOfNO4LT8gOfz4CICg&amp;dtab=5" target="_blank"><img src="https://cbks0.google.com/cbk?output=thumbnail&amp;w=90&amp;h=68&amp;ll=45.821019,16.010755&amp;thumb=0"></a>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>16.010756,45.821018,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>
