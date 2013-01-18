@@ -60,8 +60,13 @@
     <Content Include="App_Data\Xslt\HolisticWare\Layout\Maps\Google\HolisticWare..Layout.Maps.Google.JavaScriptAPIv3.xsl">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="description.md" />
-    <None Include="samples\RIZ.kml" />
+    <Content Include="js\google-maps-javascript-api-v3-holisticware-initialization.max.js" />
+    <Content Include="js\google-maps-javascript-api-v3-holisticware-marker-array.max.js" />
+    <Content Include="js\google-maps-javascript-api-v3-holisticware-marker-polygon.max.js" />
+    <Content Include="js\google-maps-javascript-api-v3-initialization.max.js" />
+    <None Include="..\HolisticWareFtCompositeC1.Layout.Maps.Google.IFrame\samples\RIZ.kml">
+      <Link>samples\RIZ.kml</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

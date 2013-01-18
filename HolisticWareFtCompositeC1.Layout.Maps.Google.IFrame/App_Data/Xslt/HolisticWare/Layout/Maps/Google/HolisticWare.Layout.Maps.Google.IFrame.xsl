@@ -6,15 +6,15 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="xsl in lang f">
 
-<!--
+  <!--
 Docummentation.MarkDown.Begin
 ===============================================================================
 ## Composite C1 Google Maps IFrame implementation
 	
 *	name:  
-	HolisticWare.Maps.Google.IFrame.xsl
+	HolisticWare.Layout.Maps.Google.IFrame.xsl
 *	namespace:  
-	HolisticWare.Maps.Google
+	HolisticWare.Layout.Maps.Google
 *	description:  
 	Google Maps implementation based on iframe
 *	url refrences  
@@ -50,21 +50,30 @@ Composite C1 - Function
 
 Parameter description:
 
-*	Width:  
+*	Debug: true | false  
+	Default value = false  
+	Debugging excludes speed optimizations (PageSpeed, YSlow) -  
+	javascript and css minifications/minimizations  
+	For production set Debug to false
+*	Width:  css width  
 	Default value = 100%  
-	width of the map
-*	Height:  
-	default value = 100%
-*	Latitude:   
-	Default value = 45.784809
-	Position on the map (HolisticWare LLC, Zagreb, Croatia)
-*	Latitude:   
-	Default value = 15.964165
-	Position on the map (HolisticWare LLC, Zagreb, Croatia)
+	css width of the map
+*	Height:  css height  
+	Default value = 100%  
+	css height of the map
+*	Latitude: decimal value  
+	Default value = 45.784809  
+	Position on the map (HolisticWare LLC, Zagreb, Croatia)  
+*	Longitude: decimal value  
+	Default value = 15.964165  
+	Position on the map (HolisticWare LLC, Zagreb, Croatia)  
 
 ===============================================================================
 Docummentation.MarkDown.End
 -->
+
+  <xsl:param name="Debug"	select="/in:inputs/in:param[@name='Debug']" />
+  <xsl:param name="debug" select="translate($Debug,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
   <xsl:param name="Width"	select="/in:inputs/in:param[@name='Width']" />
   <xsl:param name="width" select="translate($Width,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
@@ -108,14 +117,14 @@ Docummentation.MarkDown.End
 		<!--
 			style="position: absolute; width: {$width}; height: {$height};"
 		-->
-		<iframe 
-			width="{$width}" height="{$height}" 
+		<iframe
+			width="{$width}" height="{$height}"
 			scrolling="yes"
 			frameborder="1"  marginheight="1" marginwidth="1"
 			src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr={$latitude},{$longitude}&amp;daddr=&amp;hl=en&amp;geocode=&amp;mra=mi&amp;mrsp=0&amp;sz=14&amp;sll={$latitude},{$Longitude}1&amp;sspn=0.043152,0.092096&amp;ie=UTF8&amp;ll={$latitude},{$longitude}&amp;spn=0.020949,0.036478&amp;z=14&amp;output=embed"
 		>
 		</iframe>
 	  </body>
-	  </html>	
+	</html>
   </xsl:template>
 </xsl:stylesheet>

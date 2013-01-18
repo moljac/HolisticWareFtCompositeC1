@@ -55,16 +55,10 @@
 
     <!-- flowplayer javascript component -->
     <!--
-    <script 
-      src="http://releases.flowplayer.org/js/flowplayer-3.2.11.min.js">
-    </script>
+    <script  type="text/javascript" src="http://releases.flowplayer.org/js/flowplayer-3.2.11.min.js"/>
     -->
-    <script
-      src="~/js/flowplayer-3.2.11.min.js">
-    </script>
-    <script
-      src="~/js/flowplayer-customization.js">
-    </script>
+    <script type="text/javascript" src="~/js/flowplayer-3.2.11.min.js"/>
+    <script type="text/javascript" src="~/js/flowplayer-customization.js" />
     </body>
   </html>
   </xsl:template>

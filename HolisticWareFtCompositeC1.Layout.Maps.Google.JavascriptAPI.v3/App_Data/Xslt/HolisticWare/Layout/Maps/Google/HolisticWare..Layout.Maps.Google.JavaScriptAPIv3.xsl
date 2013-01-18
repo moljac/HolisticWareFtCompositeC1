@@ -6,59 +6,79 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="xsl in lang f">
 
-<!--
-## Composite C1 Google Maps IFrame implementation
+  <!--
+Docummentation.MarkDown.Begin
+===============================================================================
+## Composite C1 Google Maps Javascript API v.3 implementation
 	
-* file  
-  HolisticWare.Maps.Google.JavaScriptAPIv3.xsl
-* url refrences  
-  sample:			[]()  
-  documentation:	[]()  
-* author:  
-  HolisticWare, Miljenko Cvjetko
-* name:			
-  HolisticWare.Maps.Google.JavaScriptAPIv3
-* namespace:  
-  HolisticWare.Maps.Google
-* description:	 
-  Google Maps implementation based on JavaScript API v3
-
+*	name:  
+	HolisticWare.Layout.Maps.Google.JavaScriptAPIv3.xsl
+*	namespace:  
+	HolisticWare.Layout.Maps.Google
+*	description:  
+	Google Maps implementation based on iframe
+*	url refrences  
+	sample:			[]()  
+	documentation:	[https://developers.google.com/maps/documentation/javascript/](https://developers.google.com/maps/documentation/javascript/)
+*	author:   		
+	HolisticWare,   [http://holisticware.net](http://holisticware.net)
+	Miljenko Cvjetko
+*	licence:   
+	MIT [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
+	
+	
 ### html sample (starting point)
 
-	<iframe width="425" height="350" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" 
-		src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=45.783986,15.964937&amp;daddr=&amp;hl=en&amp;geocode=&amp;mra=mi&amp;mrsp=0&amp;sz=14&amp;sll=45.788115,15.961161&amp;sspn=0.043152,0.092096&amp;ie=UTF8&amp;ll=45.784704,15.963478&amp;spn=0.020949,0.036478&amp;z=14&amp;output=embed"
-	>
-	</iframe>
 	
-### Composite C1 - Function
+### Usage
 
-	<f:function 
-		  name="HolisticWare.Maps.Google.IFrame" 
-		  xmlns:f="http://www.composite.net/ns/function/1.0"
-		  >
-		  <f:param name="Width" value="100%" />
-		  <f:param name="Height" value="100%" />
-		  <f:param name="Latitude"  value="45.784809" />
-		  <f:param name="Longitude" value="15.964165" />
-	  </f:function>
+Composite C1 - Function
+
+	  <f:function 
+			name="HolisticWare.Maps.Google.JavaScriptAPIv3" 
+			xmlns:f="http://www.composite.net/ns/function/1.0"
+			>
+			<f:param name="Debug" value="false" />			
+			<f:param name="Width" value="100%" />
+			<f:param name="Height" value="100%" />
+			<f:param name="Latitude"  value="45.784809" />
+			<f:param name="Longitude" value="15.964165" />
+		</f:function>
 
 Parameter description:
 
-*	Width:  12 | 16 | 24
-	Default value = 16
-	if number is wrong function loads 960gs.ccs 
-	for 12 and 16 column and sets 16 as default
-*	Height:		  false
-	default is left to right layout
-*	ResizableImages:	  true | false
-	Default value = true
-	images resized -  not necessary for fixed layouts, but to be cool!
-*	PageSpeedOptimized: true | false
-	Default value = true
-	Optimization for PageSpeed turned on
+*	Debug: true | false  
+	Default value = false  
+	Debugging excludes speed optimizations (PageSpeed, YSlow) -  
+	javascript and css minifications/minimizations  
+	For production set Debug to false
+*	Width:  css width  
+	Default value = 100%  
+	css width of the map
+*	Height:  css height  
+	Default value = 100%  
+	css height of the map
+*	Latitude: decimal value  
+	Default value = 45.784809  
+	Position on the map (HolisticWare LLC, Zagreb, Croatia)  
+*	Longitude: decimal value  
+	Default value = 15.964165  
+	Position on the map (HolisticWare LLC, Zagreb, Croatia)  
+*	JavascriptCustomizationsExternalFile: string
+	Default value = ""
+	Javascript file (external) for customizations of Google Map
+*	JavascriptCustomizationsInline: string
+	Default value = ""
+	Javascript code (inline) for customizations of Google Map
+
+===============================================================================
+Docummentation.MarkDown.End
 -->
 
-  <xsl:param name="Width"	select="/in:inputs/in:param[@name='Width']" />
+  <xsl:param name="Debug" select="/in:inputs/in:param[@name='Debug']" />
+  <xsl:param name="debug" select="translate($Debug,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
+
+  <xsl:param name="Width" select="/in:inputs/in:param[@name='Width']" />
   <xsl:param name="width" select="translate($Width,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
   <xsl:param name="Height" select="/in:inputs/in:param[@name='Height']" />
@@ -70,6 +90,12 @@ Parameter description:
   <xsl:param name="Longitude" select="/in:inputs/in:param[@name='Longitude']" />
   <xsl:param name="longitude" select="translate($Longitude,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
+  <xsl:param name="JavascriptCustomizationsExternalFile" select="/in:inputs/in:param[@name='JavascriptCustomizationsExternalFile']" />
+  <xsl:param name="javascript_customizations_external_file" select="translate($JavascriptCustomizationsExternalFile,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
+
+  <xsl:param name="JavascriptCustomizationsInline" select="/in:inputs/in:param[@name='JavascriptCustomizationsInline']" />
+  <xsl:param name="javascript_customizations_inline" select="translate($JavascriptCustomizationsInline,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
+  
   <xsl:template match="/">
 	<html>
 	  <head>
@@ -97,17 +123,23 @@ Parameter description:
 		  <br/>
 		  longitude = <xsl:value-of select="$longitude" />
 		</div>
+
+		
+		<div id="map_canvas" style="width: 100%; height: 500px">
+		  <!-- google map goes here -->
+		</div>
+
 		<!--
-			style="position: absolute; width: {$width}; height: {$height};"
+		  Optimization.Speed:
+		  Javascript at the end before closing <body> tag in order to defer javascript loading
+		  and executing (non html generating javascript).
 		-->
-		<iframe 
-			width="{$width}" height="{$height}" 
-			scrolling="yes"
-			frameborder="1"  marginheight="1" marginwidth="1"
-			src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr={$latitude},{$longitude}&amp;daddr=&amp;hl=en&amp;geocode=&amp;mra=mi&amp;mrsp=0&amp;sz=14&amp;sll={$latitude},{$Longitude}1&amp;sspn=0.043152,0.092096&amp;ie=UTF8&amp;ll={$latitude},{$longitude}&amp;spn=0.020949,0.036478&amp;z=14&amp;output=embed"
-		>
-		</iframe>
+		<script type="text/javascript" src="~/js/google-maps-javascript-api-v3-initialization.max.js"/>
+		<script type="text/javascript" src="~/js/google-maps-javascript-api-v3-holisticware-initialization.max.js"/>
+		<script type="text/javascript" src="~/js/google-maps-javascript-api-v3-holisticware-marker-polygon.max.js"/>
+		<script type="text/javascript" src="~/js/google-maps-javascript-api-v3-holisticware-marker-array.max.js"/>
+
 	  </body>
-	  </html>	
+	</html>
   </xsl:template>
 </xsl:stylesheet>

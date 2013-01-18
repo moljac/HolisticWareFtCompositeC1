@@ -59,11 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HolisticWare.Layout.Content.TableOfContents.xslt" />
-    <Content Include="js\holisticware-google-maps.js" />
-    <Content Include="js\holisticware-window-onload.js" />
-    <Content Include="js\swfobject.js" />
-    <Content Include="js\web_socket.js" />
+    <Content Include="App_Data\Xslt\HolisticWare\Layout\Content\HolisticWare.Layout.Content.TableOfContents.xslt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -81,6 +77,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

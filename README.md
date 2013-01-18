@@ -19,3 +19,6 @@ References urls:
 
 Notes:
  +	Location of the files matches location of the files in Composite C1
+ +	filenames
+	+	*.max.js - non-minified (non-minimized) javascript used for debugging and troubleshooting
+	+	*.max.css - non-minified (non-minimized) css used for debugging and troubleshooting
