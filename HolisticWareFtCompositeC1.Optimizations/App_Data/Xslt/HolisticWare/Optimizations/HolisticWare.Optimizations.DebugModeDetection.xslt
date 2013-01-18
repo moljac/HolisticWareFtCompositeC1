@@ -52,27 +52,47 @@ Docummentation.MarkDown.End
 -->
   <msxsl:script language="C#" implements-prefix="user">
 	<msxsl:assembly name="System.Web" />
+	<msxsl:assembly name="System.Configuration" />
+
 	<msxsl:using namespace="System.Web" />
-	<msxsl:using namespace="HolisticWare.Optimizations" />
+	<msxsl:using namespace="System.Reflection" />
+	<msxsl:using namespace="System.Diagnostics" />
+	<msxsl:using namespace="System.Configuration" />
+
 	<![CDATA[
 	public bool IsHttpContextDebuggingEnabled()
 	{
-	  return DebugModeDetection.IsHttpContextDebuggingEnabled();
+		bool HttpContextDebuggingEnabled 
+				= HttpContext.Current.IsDebuggingEnabled;
+				
+		return HttpContextDebuggingEnabled;
 	}
 
 	public bool IsAssemblyExecutingDebuggableAttributeApplied()
 	{
-	  return DebugModeDetection.IsAssemblyExecutingDebuggableAttributeApplied();
+	  bool AssemblyExecutingDebuggableAttributeApplied
+			  = Assembly.GetExecutingAssembly().IsDefined(typeof(DebuggableAttribute), false);
+
+	  return AssemblyExecutingDebuggableAttributeApplied;
 	}
 
 	public bool IsDebuggerAttached()
 	{
-	  return DebugModeDetection.IsDebuggerAttached();
+	  bool DebuggerAttached
+			  = Debugger.IsAttached;
+
+	  return DebuggerAttached;
 	}
 	
 	public bool IsDebugMacroDefined()
 	{
-	  return DebugModeDetection.IsDebugMacroDefined();
+	  bool DebugMacroDefined = false;
+	  
+	  #if DEBUG
+	  DebugMacroDefined = true;
+	  #endif
+		
+	  return DebugMacroDefined;
 	}
 	
   ]]>

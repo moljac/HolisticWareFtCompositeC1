@@ -108,3 +108,11 @@ Backup*/
 UpgradeLog*.XML
 
 .DS_Store
+
+
+#=======================================================================
+build-output-debug/*
+/build-output-debug
+build-output-release/*
+/build-output-release
+#=======================================================================
