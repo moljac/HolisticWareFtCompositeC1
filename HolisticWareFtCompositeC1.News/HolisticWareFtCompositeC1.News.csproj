@@ -5,11 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C947CD05-6882-4C1D-BB16-5954D0406863}</ProjectGuid>
+    <ProjectGuid>{89F65D55-69C0-4F20-8872-3708C10F24D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HolisticWareFtCompositeC1.Tools.Installation</RootNamespace>
-    <AssemblyName>HolisticWareFtCompositeC1.Tools.Installation</AssemblyName>
+    <RootNamespace>HolisticWareFtCompositeC1.TestTools</RootNamespace>
+    <AssemblyName>HolisticWareFtCompositeC1.TestTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -26,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -47,31 +49,37 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Composite">
+      <HintPath>..\Lib\Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Composite.Generated, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Composite.News, Version=2.1.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Composite.Workflows">
+      <HintPath>..\Lib\Composite.Workflows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\HolisticWare\News\News.cs" />
+    <Compile Include="App_Code\HolisticWare\News\NewsItem.cs" />
+    <Compile Include="App_Code\HolisticWare\News\NewsItem.Serializable.cs" />
+    <Compile Include="News.asmx.cs">
+      <DependentUpon>News.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="News.asmx.SoapAuthentication.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Composite\Configuration\UrlFormatting.xml" />
-    <Content Include="documentation\documentation.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\Composite\AutoInstallPackages\" />
-    <Folder Include="h0115t1cw4r3\" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -80,7 +88,7 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
@@ -89,17 +97,25 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\Composite\Configuration\Composite.Debug.config" />
-    <None Include="App_Data\Composite\Configuration\Composite.Release.config" />
-    <None Include="documentation\reports\2013-02-15-00-installation-packages.md" />
-    <None Include="documentation\reports\2013-02-15-01-installation-packages-function-name-collision-multiple-technologies.md" />
-    <None Include="documentation\reports\2013-02-15-02-installation-packages-compositec1contrib.razorfunctions-config-errors.md" />
-    <None Include="documentation\reports\2013-02-15-03-installation-packages-compositec1contrib-app_code-not-compiled.md" />
-    <None Include="documentation\reports\2013-02-15-03-installation-packages-compositec1contrib-not referenced.md" />
-    <None Include="documentation\reports\2013-02-15-04-installation-packages-styleloader.md" />
-    <None Include="documentation\reports\2013-02-15-07-installation-packages-autoinstall-package-creator.md" />
-    <None Include="documentation\reports\2013-02-15-installation-packages-autoinstall-package-creator.md" />
+    <None Include="App_Code\HolisticWare\News\News.UrlFormatting.sc" />
+    <None Include="App_Data\Composite\AutoInstallPackages\Composite.News.zip" />
     <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Xslt\HolisticWare\" />
+    <Folder Include="packages-prerequisites\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Composite.Generated.dll" />
+    <Content Include="lib\Composite.News.dll" />
+    <Content Include="lib\Composite.News.pdb" />
+    <Content Include="News.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HolisticWareFtCompositeC1.Communication.RemoteAPI.WebServicesSOAP\HolisticWareFtCompositeC1.Communication.RemoteAPI.WebServicesSOAP.csproj">
+      <Project>{C989CE9D-3265-40F1-A2B0-FE62243D1356}</Project>
+      <Name>HolisticWareFtCompositeC1.Communication.RemoteAPI.WebServicesSOAP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

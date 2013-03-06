@@ -16,13 +16,19 @@
 	<add oldValue="Ü" newValue="Ue" />
 
 	<!-- Croatia/Slovenia/Bosnia-And-Herzegovina/Serbian-Latin/Montenegro -->
+	<add oldValue="Č" newValue="C" />
+	<add oldValue="Ć" newValue="C" />
+	<add oldValue="Đ" newValue="D" />
+	<add oldValue="Š" newValue="S" />
+	<add oldValue="Ž" newValue="Z" />
 	<add oldValue="č" newValue="c" />
 	<add oldValue="ć" newValue="c" />
 	<add oldValue="đ" newValue="d" />
+	<add oldValue="š" newValue="s" />
 	<add oldValue="ž" newValue="z" />
 
-	
-	<!-- Cyrillic alphabet -->
+
+  <!-- Cyrillic alphabet -->
 	<add oldValue="а" newValue="a" />
 	<add oldValue="б" newValue="b" />
 	<add oldValue="в" newValue="v" />
