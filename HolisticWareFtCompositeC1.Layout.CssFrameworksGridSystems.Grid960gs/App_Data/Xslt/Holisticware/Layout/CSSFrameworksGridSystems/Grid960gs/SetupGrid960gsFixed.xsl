@@ -7,15 +7,23 @@
 	exclude-result-prefixes="xsl in lang f">
 
   <!--	
-	grid system 960gs - fixed
-	url:		http://960.gs/
-	author: 	Nathan Smith
-	
-	Name:		  Grid960gsFixedSetupParametrized
-	Namespace:	  HolisticWare.Layout.CSSFrameworksGridSystems
-	Description:  960gs fixed layout 12, 16, 24 columns by Nathan Smith
-	
-	Parameterized function to setup grid system:
+===============================================================================
+# grid system 960gs - fixed #
+
+* 	url:		
+	[http://960.gs/](http://960.gs/)
+* 	author: 	
+	Nathan Smith	
+*	Name:		  
+	Grid960gsFixedSetupParametrized		
+* 	Namespace:	  
+	HolisticWare.Layout.CSSFrameworksGridSystems
+*	Description:  
+	960gs fixed layout 12, 16, 24 columns by Nathan Smith
+
+
+Usage (Composite C1) - Parameterized function to setup grid system:
+
 	<f:function 
 		name="HolisticWare.Layout.CSSFrameworksGridSystems.GridSystem960gsFixedSetup" 
 		xmlns:f="http://www.composite.net/ns/function/1.0"
@@ -25,20 +33,22 @@
 		<f:param name="ResizableImages" value="True" />
 		<f:param name="PageSpeedOptimized" value="True" />
 	</f:function>
-	
-	Parameter description:
-	  Number of columns:  12 | 16 | 24
-						  Default value = 16
-						  if number is wrong function loads 960gs.ccs 
-						  for 12 and 16 column and sets 16 as default
-	  RightToLeft:		  false
-						  default is left to right layout
-	  ResizableImages:	  true | false
-						  Default value = true
-						  images resized -  not necessary for fixed layouts, but to be cool!
-	  PageSpeedOptimized: true | false
-						  Default value = true
-						  Optimization for PageSpeed turned on
+
+Parameter description
+
+*	Number of columns:  12 | 16 | 24  
+	Default value = 16  
+	if number is wrong function loads 960gs.ccs 
+	for 12 and 16 column and sets 16 as default
+* 	RightToLeft:		  false  
+	default is left to right layout
+* 	ResizableImages:	  true | false
+* 	Default value = true   
+	images resized -  not necessary for fixed layouts, but to be cool!  
+* 	PageSpeedOptimized: true | false  
+	Default value = true
+	Optimization for PageSpeed turned on
+===============================================================================
 -->
 
   <xsl:param name="NumberOfColumns" select="/in:inputs/in:param[@name='NumberOfColumns']" />
@@ -58,8 +68,6 @@
 		Old obsolete! Not possible due to implementation limitations in Composite C1!
 	<xsl:param name="layoutdefinitionfunction" select="/in:inputs/in:param[@name='LayoutDefinitionFunction']" />
 	-->
-
-
   <xsl:template match="/">
 	<html>
 	  <head>
