@@ -37,12 +37,11 @@
 	<xsl:param name="resizableimages" select="translate($ResizableImages,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 	<xsl:param name="pagespeedoptimized" select="translate($PageSpeedOptimized,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
-	<!--
-		For layout customization!
-		Old obsolete! Not possible due to implementation limitations in Composite C1!
+<!--
+	For layout customization!
+	Old obsolete! Not possible due to implementation limitations in Composite C1!
 	<xsl:param name="layoutdefinitionfunction" select="/in:inputs/in:param[@name='LayoutDefinitionFunction']" />
-	-->
-	
+-->
 	
 	<xsl:template match="/">
 	<html>
@@ -54,13 +53,13 @@
 						rel="stylesheet" 
 						type="text/css" 
 						media="screen" 
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/reset.css" 
+						href="~/css/fixed/reset.css" 
 						/>
 					<link 
 						rel="stylesheet" 
 						type="text/css" 
 						media="screen" 
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/text.css"  
+						href="~/css/fixed/text.css"  
 						/>
 					<xsl:choose>
 						<xsl:when test="$layouttype='fixed'">
@@ -68,25 +67,25 @@
 								rel="stylesheet" 
 								type="text/css" 
 								media="screen" 
-								href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fixed.css" 
+								href="~/css/fixed/960_fixed.css" 
 								/>
 							<link 
 								rel="stylesheet" 
 								type="text/css" 
 								media="screen" 
-								href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fixed.ie.css" 
+								href="~/css/fixed/960_fixed.ie.css" 
 								/>
 								<link 
 									rel="stylesheet" 
 									type="text/css" 
 									media="screen" 
-									href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/ie6.css" 
+									href="~/css/fixed/ie6.css" 
 									/>
 								<link 
 									rel="stylesheet" 
 									type="text/css" 
 									media="screen" 
-									href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/ie.css" 
+									href="~/css/fixed/ie.css" 
 									/>
 
 							<!--[if IE lte 6]>
@@ -94,7 +93,7 @@
 									rel="stylesheet" 
 									type="text/css" 
 									media="screen" 
-									href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/ie6.css" 
+									href="~/css/fixed/ie6.css" 
 									/>
 							<![endif]-->
 							<!--[if IE gt 6]>
@@ -102,7 +101,7 @@
 									rel="stylesheet" 
 									type="text/css" 
 									media="screen" 
-									href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/ie.css" 
+									href="~/css/fixed/ie.css" 
 									/>
 							<![endif]-->
 						</xsl:when>
@@ -111,14 +110,14 @@
 								rel="stylesheet" 
 								type="text/css" 
 								media="screen" 
-								href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fluid.css" 
+								href="~/css/fixed/960_fluid.css" 
 								/>
 							<!--[if IE lte 6]>
 								<link 
 									rel="stylesheet" 
 									type="text/css" 
 									media="screen" 
-									href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fluid.ie6.css" 
+									href="~/css/fixed/960_fluid.ie6.css" 
 									/>
 							<![endif]-->
 							<!--[if IE gt 6]>
@@ -126,7 +125,7 @@
 									rel="stylesheet" 
 									type="text/css" 
 									media="screen" 
-									href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fluid.ie.css" 
+									href="~/css/fixed/960_fluid.ie.css" 
 									/>
 							<![endif]-->
 						</xsl:otherwise>
@@ -135,32 +134,32 @@
 						rel="stylesheet" 
 						type="text/css" 
 						media="screen" 
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/layout.css" 
+						href="~/css/fixed/layout.css" 
 						/>
 						<link 
 							rel="stylesheet" 
 							type="text/css" 
 							media="screen" 
-							href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/layout.ie.css" 
+							href="~/css/fixed/layout.ie.css" 
 							/>
 					<link 
 						rel="stylesheet" 
 						type="text/css" 
 						media="screen" 
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/nav.css" 
+						href="~/css/fixed/nav.css" 
 						/>
 					<!--[if IE gt 6]>
 						<link 
 							rel="stylesheet" 
 							type="text/css" 
 							media="screen" 
-							href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fluid.ie.css" 
+							href="~/css/fixed/960_fluid.ie.css" 
 							/>
 						<link 
 							rel="stylesheet" 
 							type="text/css" 
 							media="screen" 
-							href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css/960_fluid_tables.ie.css" 
+							href="~/css/fixed/960_fluid_tables.ie.css" 
 							/>
 					<![endif]-->
 				</xsl:when>
@@ -171,7 +170,7 @@
 								rel="stylesheet" 
 								type="text/css" 
 								media="screen" 
-								href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css-optimized-pagespeed/holisticware_960gs_fixed.css.yc.css" 
+								href="~/css/fixed-optimized-pagespeed/holisticware_960gs_fixed.css.yc.css" 
 								/>
 						</xsl:when>
 						<xsl:otherwise>
@@ -179,7 +178,7 @@
 								rel="stylesheet" 
 								type="text/css" 
 								media="screen" 
-								href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fluid/css-optimized-pagespeed/holisticware_960gs_fluid.css.yc.css" 
+								href="~/css/fixed-optimized-pagespeed/holisticware_960gs_fluid.css.yc.css" 
 								/>
 						</xsl:otherwise>
 					</xsl:choose>

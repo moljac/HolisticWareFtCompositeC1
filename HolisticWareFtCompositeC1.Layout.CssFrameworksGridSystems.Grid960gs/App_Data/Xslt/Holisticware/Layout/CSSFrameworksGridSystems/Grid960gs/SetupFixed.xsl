@@ -15,22 +15,41 @@
 * 	author: 	
 	Nathan Smith	
 *	Name:		  
-	Grid960gsFixedSetupParametrized		
+	SetupFixed		
 * 	Namespace:	  
-	HolisticWare.Layout.CSSFrameworksGridSystems
+	HolisticWareFtCompositeC1.Layout.CSSFrameworksGridSystems.Grid960gs
 *	Description:  
 	960gs fixed layout 12, 16, 24 columns by Nathan Smith
 
+## Prerequisites ##
 
-Usage (Composite C1) - Parameterized function to setup grid system:
+Composite C1 packages:
+
+1.
+
+## Installation ##
+
+Deployment type
+
+1. xcopy  
+	1. 	copy folders into Website or WebApplication root   
+		js/   
+		css/   
+2.  Packages Composite C1
+	1. 
+	
+
+## Usage ##
+
+Composite C1 XSLT function - Parameterized function to setup grid system:
 
 	<f:function 
-		name="HolisticWare.Layout.CSSFrameworksGridSystems.GridSystem960gsFixedSetup" 
+		name="HolisticWareFtCompositeC1.Layout.CSSFrameworksGridSystems.Grid960gs.SetupFixed" 
 		xmlns:f="http://www.composite.net/ns/function/1.0"
 		>
 		<f:param name="NumberOfColumns" value="16" />
 		<f:param name="RightToLeft" value="False" />
-		<f:param name="ResizableImages" value="True" />
+		<f:param name="ResizableObjects" value="True" />
 		<f:param name="PageSpeedOptimized" value="True" />
 	</f:function>
 
@@ -42,7 +61,7 @@ Parameter description
 	for 12 and 16 column and sets 16 as default
 * 	RightToLeft:		  false  
 	default is left to right layout
-* 	ResizableImages:	  true | false
+* 	ResizableObjects:	  true | false
 * 	Default value = true   
 	images resized -  not necessary for fixed layouts, but to be cool!  
 * 	PageSpeedOptimized: true | false  
@@ -57,17 +76,17 @@ Parameter description
   <xsl:param name="RightToLeft" select="/in:inputs/in:param[@name='RightToLeft']" />
   <xsl:param name="righttoleft" select="translate($RightToLeft,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
-  <xsl:param name="ResizableImages" select="/in:inputs/in:param[@name='ResizableImages']" />
-  <xsl:param name="resizableimages" select="translate($ResizableImages,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
+  <xsl:param name="ResizableObjects" select="/in:inputs/in:param[@name='ResizableObjects']" />
+  <xsl:param name="resizableobjects" select="translate($ResizableObjects,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
   <xsl:param name="PageSpeedOptimized" select="/in:inputs/in:param[@name='PageSpeedOptimized']" />
   <xsl:param name="pagespeedoptimized" select="translate($PageSpeedOptimized,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" />
 
-  <!--
-		For layout customization!
-		Old obsolete! Not possible due to implementation limitations in Composite C1!
+<!--
+	For layout customization!
+	Old obsolete! Not possible due to implementation limitations in Composite C1!
 	<xsl:param name="layoutdefinitionfunction" select="/in:inputs/in:param[@name='LayoutDefinitionFunction']" />
-	-->
+-->
   <xsl:template match="/">
 	<html>
 	  <head>
@@ -78,14 +97,14 @@ Parameter description
 				rel="stylesheet"
 				type="text/css"
 				media="screen"
-				href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/reset.css"
-						/>
+				href="~/css/fixed/reset.css"
+				/>
 			<link
 				rel="stylesheet"
 				type="text/css"
 				media="screen"
-				href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/text.css"
-						/>
+				href="~/css/fixed/text.css"
+				/>
 			<xsl:choose>
 			  <xsl:when test="($numberofcolumns='12')">
 				<xsl:choose>
@@ -94,16 +113,16 @@ Parameter description
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_12_col.css"
-									/>
+						href="~/css/fixed/960_12_col.css"
+					/>
 				  </xsl:when>
 				  <xsl:otherwise>
 					<link
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_12_col_rtl.css"
-									/>
+						href="~/css/fixed/960_12_col_rtl.css"
+						/>
 				  </xsl:otherwise>
 				</xsl:choose>
 			  </xsl:when>
@@ -114,16 +133,16 @@ Parameter description
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_16_col.css"
-								/>
+						href="~/css/fixed/960_16_col.css"
+						/>
 				  </xsl:when>
 				  <xsl:otherwise>
 					<link
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_16_col_rtl.css"
-							/>
+						href="~/css/fixed/960_16_col_rtl.css"
+						/>
 				  </xsl:otherwise>
 				</xsl:choose>
 			  </xsl:when>
@@ -134,16 +153,16 @@ Parameter description
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_24_col.css"
-								/>
+						href="~/css/fixed/960_24_col.css"
+						/>
 				  </xsl:when>
 				  <xsl:otherwise>
 					<link
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_24_col_rtl.css"
-							/>
+						href="~/css/fixed/960_24_col_rtl.css"
+						/>
 				  </xsl:otherwise>
 				</xsl:choose>
 			  </xsl:when>
@@ -154,16 +173,16 @@ Parameter description
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960.css"
-								/>
+						href="~/css/fixed/960.css"
+						/>
 				  </xsl:when>
 				  <xsl:otherwise>
 					<link
 						rel="stylesheet"
 						type="text/css"
 						media="screen"
-						href="~/holisticware/layout/css-frameworks-grid-systems/960gs-fixed/css/960_rtl.css"
-							/>
+						href="~/css/fixed/960_rtl.css"
+						/>
 				  </xsl:otherwise>
 				</xsl:choose>
 			  </xsl:otherwise>
@@ -178,8 +197,8 @@ Parameter description
 
 
 
-		
-		<xsl:if test="$resizableimages='true'">
+	<!--	
+		<xsl:if test="$Resiza='true'">
 		  <xsl:choose>
 			<xsl:when test="$pagespeedoptimized='false'">
 			  <script
@@ -192,6 +211,7 @@ Parameter description
 			</xsl:otherwise>
 		  </xsl:choose>
 		</xsl:if>
+	-->
 	  </body>
 	  </html>	
   </xsl:template>
