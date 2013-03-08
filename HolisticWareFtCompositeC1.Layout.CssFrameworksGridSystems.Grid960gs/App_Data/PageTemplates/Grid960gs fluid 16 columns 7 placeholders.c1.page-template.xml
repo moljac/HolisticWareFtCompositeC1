@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:f="http://www.composite.net/ns/function/1.0" 
+	xmlns:lang="http://www.composite.net/ns/localization/1.0" 
+	xmlns:rendering="http://www.composite.net/ns/rendering/1.0" 
+	xmlns:asp="http://www.composite.net/ns/asp.net/controls"
+	>
+	<!--
+		HolisticWare 960gs template sample
+		Template: Grid960gs fluid 16 columns 7 placeholders[c1.Template.x.html]
+
+	-->
+	<f:function name="Composite.Web.Html.Template.LangAttribute" />
+	<head>
+		<title>
+			<rendering:page.title />
+		</title>
+		<f:function name="Composite.Web.Html.Template.CommonMetaTags" />
+		<rendering:page.metatag.description />
+	</head>
+	<body>
+		<!--
+		<div style="float:right; width:10em">
+			<f:function name="Composite.Pages.QuickSitemap" />
+		</div>
+		-->
+		<h1><rendering:page.title /></h1>
+		<h2><rendering:page.description /></h2>
+		
+		<!--
+		=======================================================================
+		HolisticWare Layout setup begin
+		-->
+		<f:function 
+			name="HolisticWare.Layout.CSSFrameworksGridSystems.Grid960gsSetupParametrized"
+			xmlns:f="http://www.composite.net/ns/function/1.0"
+			>
+			<f:param name="NumberOfColumns" value="16" />
+			<!--
+			-->
+			<f:param name="LayoutType" value="fixed" />
+			<f:param name="JavaScriptLibrary" value="JQuery" />
+			<f:param name="PageSpeedOptimized" value="false" />
+			<f:param name="ResizableImages" value="True" />
+		</f:function>
+		<!--
+		HolisticWare Layout setup end
+		=======================================================================
+		-->
+		<!--
+		=======================================================================
+		HolisticWare Layout definition begin
+		
+		be carefull not to nest <grid_xx> inside another <grid_xx>
+		-->
+		<div class="container_16">
+			<div class="grid_16">
+				<rendering:placeholder id="Branding" title="Branding" default="false" />
+			</div>
+			<div class="clear" />
+			<div class="grid_16">
+				<rendering:placeholder id="NavigationMain" title="NavigationMain" default="false" />
+			</div>
+			<div class="clear" />
+			<div class="grid_16_defined_in_content">
+				<rendering:placeholder id="PageHeading" title="PageHeading" default="false" />
+			</div>
+			<div class="clear" />
+			<div class="box grid_16" style="padding:0;">
+				<h2 style="margin:0"><a id="toggle-grid" href="#" style="background-position:99.3% 50%">16-column Grid</a></h2>
+				<rendering:placeholder id="Grid" title="Grid" default="false" />
+			</div>
+			<div class="clear" />
+			<div class="grid_16">
+				<rendering:placeholder id="KwickBoxMooToolsFxElements" title="KwickBoxMooToolsFxElements" default="false" />
+			</div>
+			<div class="clear" />
+			<div class="grid_4">
+				<rendering:placeholder id="ColumnL" title="ColumnL" default="false" />
+			</div>
+			<div class="grid_7">
+				<rendering:placeholder id="ColumnM" title="ColumnM" default="true" />
+			</div>
+			<div class="grid_5">
+				<rendering:placeholder id="ColumnR" title="ColumnR" default="false" />
+			</div>
+			<div class="clear" />
+			<div id="site_info" class="grid_16">
+				<rendering:placeholder id="SiteInfo" title="SiteInfo" default="false" />
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--
+		HolisticWare Layout definition end
+		=======================================================================
+		-->
+	</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:f="http://www.composite.net/ns/function/1.0" 
+	xmlns:lang="http://www.composite.net/ns/localization/1.0" 
+	xmlns:rendering="http://www.composite.net/ns/rendering/1.0" 
+	xmlns:asp="http://www.composite.net/ns/asp.net/controls"
+	>
+	<!--
+		HolisticWare 960gs template sample
+		Template: Grid960gs fluid 16 columns 1 placeholder[c1.Template.x.html]
+
+	-->
+	<f:function name="Composite.Web.Html.Template.LangAttribute" />
+	<head>
+		<title>
+			<rendering:page.title />
+		</title>
+		<f:function name="Composite.Web.Html.Template.CommonMetaTags" />
+		<rendering:page.metatag.description />
+	</head>
+	<body>
+		<!--
+		<div style="float:right; width:10em">
+			<f:function name="Composite.Pages.QuickSitemap" />
+		</div>
+		-->
+		<h1><rendering:page.title /></h1>
+		<h2><rendering:page.description /></h2>
+		
+		<!--
+		=======================================================================
+		HolisticWare Layout setup begin
+		-->
+		<f:function 
+			name="HolisticWare.Layout.CSSFrameworksGridSystems.Grid960gsSetupParametrized"
+			xmlns:f="http://www.composite.net/ns/function/1.0"
+			>
+			<!--
+			<f:param name="NumberOfColumns" value="12" />
+			-->
+			<f:param name="LayoutType" value="Fluid" />
+			<f:param name="JavaScriptLibrary" value="JQuery" />
+			<f:param name="PageSpeedOptimized" value="False" />
+			<f:param name="ResizableImages" value="True" />
+		</f:function>
+		<!--
+		HolisticWare Layout setup end
+		=======================================================================
+		-->
+		<!--
+		=======================================================================
+		HolisticWare Layout definition begin
+		
+		be carefull not to nest <grid_xx> inside another <grid_xx>
+		-->
+		<div class="container_16">
+			<rendering:placeholder id="content" title="Content" default="true" />
+		</div>
+		<!--
+		HolisticWare Layout definition end
+		=======================================================================
+		-->
+	</body>
+</html>

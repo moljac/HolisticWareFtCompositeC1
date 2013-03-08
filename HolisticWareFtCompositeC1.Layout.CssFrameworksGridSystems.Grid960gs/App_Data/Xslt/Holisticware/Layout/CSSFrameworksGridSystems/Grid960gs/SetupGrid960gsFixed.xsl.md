@@ -1,13 +1,13 @@
-﻿# grid system 960gs - fixed #
+﻿# Grid System 960gs - fixed #
 
 * 	url:		
 	[http://960.gs/](http://960.gs/)
 * 	author: 	
 	Nathan Smith	
 *	Name:		  
-	SetupFixed		
+	SetupGrid960gsFixed		
 * 	Namespace:	  
-	HolisticWareFtCompositeC1.Layout.CSSFrameworksGridSystems.Grid960gs
+	HolisticWare.Layout.CSSFrameworksGridSystems.Grid960gs
 *	Description:  
 	960gs fixed layout 12, 16, 24 columns by Nathan Smith
 
@@ -48,13 +48,13 @@ Composite C1 XSLT function - Parameterized function to setup grid system:
 
 Parameter description
 
-*	Number of columns:  12 | 16 | 24  
+*	NumberOfColumns<Int32>=12|16|24  
 	Default value = 16  
 	if number is wrong function loads 960gs.css 
 	for 12 and 16 column and sets 16 as default
-* 	RightToLeft:		  false  
+* 	RightToLeft<Boolean>=false  
 	default is left to right layout
-	images resized -  not necessary for fixed layouts, but to be cool!  
-* 	PageSpeedOptimized: true | false  
+* 	PageSpeedOptimized<Boolean>: true|false
 	Default value = true
 	Optimization for PageSpeed turned on
+
