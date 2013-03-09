@@ -49,12 +49,12 @@ Composite C1 XSLT function - Parameterized function to setup grid system:
 Parameter description
 
 *	NumberOfColumns<Int32>=12|16|24  
-	Default value = 16  
-	if number is wrong function loads 960gs.css 
-	for 12 and 16 column and sets 16 as default
+	Default value = 16   
+	if number is wrong function loads 960gs.css   
+	for 12 and 16 column and sets 16 as default  
 * 	RightToLeft<Boolean>=false  
-	default is left to right layout
-* 	PageSpeedOptimized<Boolean>: true|false
+	default is left to right layout  
+* 	PageSpeedOptimized<Boolean>=true|false  
 	Default value = true
 	Optimization for PageSpeed turned on
 

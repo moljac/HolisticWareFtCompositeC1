@@ -1,0 +1,22 @@
+/*
+older versions of Internet Explorer would rather smear poo in their hair than render 
+a proper stylesheet don’t support max-width. So for especially large images, relying 
+on a simple width: 100% rule in an IE-specific stylesheet
+*/
+
+  img 	/* images */
+, object  /* videos, plugins (flash, silverlight) */
+, p
+{
+	width: 100%;
+}
+
+  img 	/* images */
+{
+  -ms-interpolation-mode: bicubic;
+}
+/*
+For silverlight and flash
+
+Just set the width of the object element the same way like for an img, and it should work.
+*/
