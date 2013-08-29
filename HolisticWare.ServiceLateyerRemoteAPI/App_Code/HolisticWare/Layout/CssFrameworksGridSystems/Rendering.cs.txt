@@ -1,0 +1,90 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Xml.Linq;
+
+using Composite.Core.WebClient.Renderings.Page;
+using Composite.Data;
+using Composite.Data.Types;
+using Composite.Functions;
+
+
+using CompositeC1Contrib.Web.UI;
+
+namespace HolisticWare.Layout.CSSFrameworksGridSystems
+{
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <see cref="http://docs.composite.net/ASP-NET/CSharpFunctions/Creating-External-C-Functions"/>
+	/// <f:function 
+	///		name="HolisticWare.Layout.CSSFrameworksGridSystems.RenderingPlaceholder" 
+	///		xmlns:f="http://www.composite.net/ns/function/1.0"
+	///		>
+	///	</f:function>
+	public 
+		static 
+		class 
+		Rendering 
+	{
+		[
+		  FunctionParameterDescription
+			(
+			  "PlaceholderName"						// TODO: comment this
+			, "Placeholder name"					// TODO: comment this
+			, "Name of the placeholder to render"	// TODO: comment this
+			)
+		]
+		/*
+		 */
+		public static Control Placeholder(string placeholder_name)
+		{
+			var plc = new PlaceHolder();
+
+			var content = DataFacade.GetData<IPagePlaceholderContent>().Single
+				(
+				  p => 
+					  (
+					    p.PageId == PageRenderer.CurrentPageId 
+						&&
+						p.PlaceHolderId == placeholder_name
+					  )
+				);
+			
+			var helper = new PageRendererHelper();
+			var mapper = (IXElementToControlMapper)helper.FunctionContext.XEmbedableMapper;
+			var doc = helper.RenderDocument(content);
+			var body = PageRendererHelper.GetDocumentPart(doc, "body");
+
+			addNodesAsControls(body.Nodes(), plc, mapper);
+
+			var page = HttpContext.Current.CurrentHandler as Page;
+
+			if (page != null)
+			{
+				if (page.Header != null)
+				{
+					var head = PageRendererHelper.GetDocumentPart(doc, "head");
+					if (head != null)
+					{
+						addNodesAsControls(head.Nodes(), page.Header, mapper);
+					}
+				}
+			}
+
+			return plc;
+		}
+
+		private static void addNodesAsControls(IEnumerable<XNode> nodes, Control parent, IXElementToControlMapper mapper)
+		{
+			foreach (var node in nodes)
+			{
+				var c = node.AsAspNetControl(mapper);
+				parent.Controls.Add(c);
+			}
+		}
+		// * /
+	}
+}

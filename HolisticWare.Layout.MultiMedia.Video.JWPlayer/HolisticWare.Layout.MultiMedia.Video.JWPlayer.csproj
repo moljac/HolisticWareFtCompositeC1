@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B7E09AF-81D8-4259-A2B8-A8BFB5292B31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HolisticWare.MultiMedia.Video.JWPlayer</RootNamespace>
+    <AssemblyName>HolisticWare.MultiMedia.Video.JWPlayer</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="documentation\jwplayer-free-6-0-2813.zip" />
+    <None Include="documentation\references-urls.bat" />
+    <None Include="documentation\sdks_jw6-plugin-sdk-2902.zip" />
+    <None Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\libs\jwplayer-6-lib.swc" />
+    <None Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\apitester\APITester.as" />
+    <None Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\apitester\build.bat" />
+    <None Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\apitester\build.sh" />
+    <None Include="documentation\sdks_jw6-skin-sdk-2902.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="documentation\jwplayer-free-6-0-2813\jwplayer\jwplayer.flash.swf" />
+    <Content Include="documentation\jwplayer-free-6-0-2813\jwplayer\jwplayer.html5.js" />
+    <Content Include="documentation\jwplayer-free-6-0-2813\jwplayer\jwplayer.js" />
+    <Content Include="documentation\jwplayer-free-6-0-2813\jwplayer\README.html" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\docs\plugins-api.html" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\docs\plugins-flash.html" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\docs\plugins-js.html" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\docs\plugins.html" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\apitester\apitester.js" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\apitester\apitester.swf" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\apitester\mute.png" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\plugins\helloworld\helloworld.js" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\README.html" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\assets\error.png" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\assets\flash.png" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\assets\html5.png" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\assets\jwplayer.flash.swf" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\assets\jwplayer.html5.js" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\assets\jwplayer.js" />
+    <Content Include="documentation\sdks_jw6-plugin-sdk-2902\sdks\jw6-plugin-sdk\tests\index.html" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\README.html" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\cc.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\divider.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\fullscreen.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\hd.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\mute.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\next.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\normalscreen.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\pause.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\play.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\prev.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\texts.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\timeBuffer.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\timeProgress.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\timeRail.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\timeThumb.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\controlbar\unmute.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\display\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\display\buffer.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\display\error.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\display\play.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\display\replay.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\dock\active.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\dock\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\dock\divider.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\five.xml" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\active.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\cap.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\divider.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\image.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\item.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\rail.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\playlist\thumb.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\active.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\arrow.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\bottom.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\cap.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\cc.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\hd.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\option.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\progress.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\rail.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\five\tooltip\thumb.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\cc.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\ccOffButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\ccOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\divider.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\fullscreenButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\fullscreenButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\hd.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\hdOffButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\hdOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\left.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\muteButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\muteButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\nextButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\nextButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\normalscreenButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\normalscreenButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\pauseButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\pauseButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\playButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\playButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\prevButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\prevButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\right.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderBuffer.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderBufferCapLeft.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderBufferCapRight.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderCap.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderProgress.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderProgressCapLeft.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderProgressCapRight.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderRail.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderRailCapLeft.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderRailCapRight.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\timeSliderThumb.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\unmuteButton.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\controlbar\unmuteButtonOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\buffer.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\error.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\left.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\play.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\playOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\replay.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\replayOver.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\display\right.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\dock\active.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\dock\button.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\dock\divider.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\active.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\cap.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\divider.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\image.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\item.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\rail.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\railBottom.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\railTop.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\thumb.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\thumbBottom.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\playlist\thumbTop.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\six.xml" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\arrow.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\back.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\bottomLeft.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\bottomRight.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\cc.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\hd.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\option.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\over.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\topLeft.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\topRight.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderCap.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderProgress.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderProgressCapBottom.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderProgressCapTop.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderRail.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderRailCapBottom.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderRailCapTop.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\skins\six\tooltip\volumeSliderThumb.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\assets\error.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\assets\flash.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\assets\html5.png" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\assets\jwplayer.flash.swf" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\assets\jwplayer.html5.js" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\assets\jwplayer.js" />
+    <Content Include="documentation\sdks_jw6-skin-sdk-2902\sdks\jw6-skin-sdk\tests\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\HolisticWare\Layout\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,98 @@
+						yslow/100								pagespeed/100		
+						[small-site-or-blog;yslow2;classic]		
+			
+default starter
+
+
+
+HolisticWare web		
+	compression
+	cache expire		98;91;86								90
+		
+	keepalive
+	etags				98;91;86								90
+	
+	
+HolisticWare 960gs	fluid		
+						87;77;64								80
+
+	minification+merge	
+						86;78;67								75+-2
+						89;80;69								75+-2
+
+
+
+
+Deffering Javascript
+
+ToDo:
+<script type="text/javascript">
+	// Add a script element as a child of the body
+	function downloadJSAtOnload() 
+	{
+		var javascript_files = new Array
+		(
+		  "~/HolisticWare/960gs/js/jquery-1.6.4.min.js"
+		, "~/HolisticWare/960gs/js/jquery-ui.js"
+		, "~/HolisticWare/960gs/js/jquery-fluid16.js"
+		, "~/HolisticWare/Media/img-resizer.js"
+		);
+		for (var f in javascript_files)
+		{
+		var element = document.createElement("script");
+		element.src = f;
+		document.body.appendChild(element);
+		}
+	}
+
+	// Check for browser support of event handling capability
+	if (window.addEventListener) 
+	{
+		window.addEventListener("load", downloadJSAtOnload, false);
+	}
+	else if (window.attachEvent) 
+	{
+		window.attachEvent("onload", downloadJSAtOnload);
+	}
+	else 
+	{
+		window.onload = downloadJSAtOnload;
+	}
+</script>
+
+
+
+
+
+Manual step
+	merging
+	minifying
+	css to change if csses relocated and using imports for
+	
+Caching
+	c#
+	http://msdn.microsoft.com/en-us/kb/kbarticle.aspx?id=323290
+	http://www.dotnetperls.com/cache
+	
+
+	iis web.config
+		syste.webServer + staticContent + clientCahce
+		
+		http://www.iis.net/ConfigReference/system.webServer/staticContent/clientCache
+		http://msdn.microsoft.com/en-us/kb/kbarticle.aspx?id=323290
+		http://msdn.microsoft.com/en-us/library/system.net.httpwebresponse.lastmodified(v=vs.71).aspx
+		http://www.gutgames.com/post/ASPNet-Caching.aspx
+		http://forums.iis.net/t/1067723.aspx
+
+
+
+Images
+	png
+		optipng
+			http://optipng.sourceforge.net/
+
+	jpeg
+		jpegtran
+			http://linux.about.com/library/cmd/blcmdl1_jpegtran.htm
+		jpegoptim
+		

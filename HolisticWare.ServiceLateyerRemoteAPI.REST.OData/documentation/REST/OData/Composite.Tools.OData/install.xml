@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
+	<mi:PackageRequirements minimumCompositeVersion="2.0.3898.29851" maximumCompositeVersion="3.9999.9999.9999" />
+	<mi:PackageInformation
+		name="Composite.OData"
+		groupName="Composite.Demo"
+		version="1.0.1"
+		author="Composite A/S"
+		website="http://www.composite.net/"
+		id="1840adb8-94db-430f-9a25-fc06bd8f184f"
+		canBeUninstalled="true"
+		systemLocking="hard"
+		flushOnCompletion="false">
+		<Description>A package that demonstrates work with OData</Description>
+	</mi:PackageInformation>
+	<mi:PackageFragmentInstallerBinaries />
+	<mi:PackageFragmentInstallers>
+		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
+			<Files>
+				<File sourceFilename="~\OData\OData.svc" targetFilename="~\OData\OData.svc" allowOverwrite="true" />
+			</Files>
+			<Directories>
+				<Directory sourceDirectory="~\App_Code\OData\" targetDirectory="~\App_Code\OData\" allowOverwrite="true" deleteTargetDirectory="false" />
+			</Directories>
+		</mi:Add>
+		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FileXslTransformationPackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FileXslTransformationPackageFragmentUninstaller, Composite">
+			<XslFiles>
+				<XslFile pathXml="~\Web.config" installXsl="~\Xsl\Web_config.xsl" />
+			</XslFiles>
+		</mi:Add>
+	</mi:PackageFragmentInstallers>
+</mi:PackageInstaller>
